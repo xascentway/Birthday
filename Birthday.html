@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday 💖</title>
+  <meta name="theme-color" content="#ffb6c1" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#fff0f5;
+      --bg2:#ffe4e1;
+      --bg3:#fffafc;
+      --hot:#ff6fa9;
+      --accent:#ffc1cc;
+      --ink:#3b2c35;
+      --card:#ffffffdd;
+      --shadow:0 10px 35px -8px rgba(0,0,0,.25);
+    }
+    *{box-sizing:border-box; margin:0; padding:0}
+    html,body{height:100%; scroll-behavior:smooth;}
+    body{
+      font-family:Quicksand, sans-serif;
+      background:linear-gradient(120deg,var(--bg1),var(--bg2),var(--bg3));
+      color:var(--ink);
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    header.hero{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:3rem 1rem;
+      position:relative;
+    }
+    header.hero h1{
+      font-family:"Great Vibes",cursive;
+      font-size:clamp(2.5rem,8vw,5rem);
+      color:var(--hot);
+      animation: fadeInDown 2s ease;
+    }
+    header.hero p{
+      margin-top:1rem;
+      font-size:1.1rem;
+      max-width:600px;
+      animation: fadeInUp 2.5s ease;
+    }
+    .btn{
+      display:inline-block;
+      margin-top:1.5rem;
+      background:var(--hot);
+      color:#fff;
+      padding:.8rem 1.4rem;
+      border:none;
+      border-radius:25px;
+      cursor:pointer;
+      font-weight:600;
+      box-shadow:var(--shadow);
+      transition:.2s;
+      animation: pulse 2s infinite;
+    }
+    .btn:hover{transform:translateY(-2px); background:#ff4f91}
+
+    section{padding:4rem 1rem; text-align:center; position:relative;}
+    section h2{font-family:"Great Vibes",cursive; font-size:2.5rem; color:var(--hot)}
+
+    .card{
+      background:var(--card);
+      border-radius:20px;
+      padding:2rem;
+      box-shadow:var(--shadow);
+      margin-top:1.5rem;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    /* carousel */
+    .carousel{
+      margin-top:2rem;
+      position:relative;
+      max-width:800px;
+      margin-inline:auto;
+      overflow:hidden;
+      border-radius:20px;
+      box-shadow:var(--shadow);
+    }
+    .slides{
+      display:flex;
+      transition:transform 0.8s ease;
+    }
+    .slide{
+      min-width:100%;
+      position:relative;
+    }
+    .slide img{
+      width:100%; height:420px; object-fit:cover;
+    }
+    .caption{
+      position:absolute;
+      bottom:0; left:0; right:0;
+      background:rgba(0,0,0,.4);
+      color:#fff;
+      padding:1rem;
+      font-size:1rem;
+      text-align:center;
+      font-weight:500;
+    }
+
+    footer{
+      text-align:center;
+      padding:2rem 1rem;
+      font-size:.9rem;
+      color:#555;
+    }
+
+    /* floating hearts */
+    .heart{
+      position:fixed;
+      bottom:-20px;
+      color:#ff6fa9;
+      font-size:20px;
+      animation: rise 6s linear forwards;
+      pointer-events:none;
+      z-index:999;
+    }
+
+    @keyframes rise{
+      0%{transform:translateY(0) scale(1); opacity:1}
+      100%{transform:translateY(-120vh) scale(1.8); opacity:0}
+    }
+    @keyframes pulse{
+      0%,100%{transform:scale(1)}
+      50%{transform:scale(1.08)}
+    }
+    @keyframes fadeInDown{
+      from{opacity:0; transform:translateY(-40px)}
+      to{opacity:1; transform:translateY(0)}
+    }
+    @keyframes fadeInUp{
+      from{opacity:0; transform:translateY(40px)}
+      to{opacity:1; transform:translateY(0)}
+    }
+    @keyframes float{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-15px)}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Happy Birthday, <span id="girlName">Bestie</span> 💖</h1>
+    <div class="card">
+    <p>Happy Birthday Nidhi 🎂🎉💖
+<br>
+I don't think I'll ever have the right words to fully express how much you mean to me — but I'll try anyway. ✨
+<br>
+Thank you...
+<br>
+Thank you for showing up in my life and staying. For the laughter 😂, the late-night talks 🌙💬, the silent understanding 🤝, and even the difficult conversations 💭. Thank you for being real with me, for seeing me when I felt invisible 👀, and for all the ups and downs in our bond which is completely different from the last 8 years ⏳💫.
+<br>
+You've been my calm in the chaos 🌊🕊️, my steady when everything else feels shaky 🌍🤍. You've taught me that love doesn't always come with fireworks 🎆 — it can also be quiet, patient, and steady 🌸. And that's exactly what you've been for me.
+<br>
+So today, you deserve that and so much more 🌹. I hope this year brings you peace ☮️, joy 😇, and everything you've quietly wished for when no one was listening 🌠.
+<br>
+I don't know what you think about me or what I truly mean to you 🤔💭, but for me, you matter the most every single time 💖.
+<br>
+Happy Birthday once again, Nidhi 🎂🥳🎀
+I'm so lucky I get to say I know you 🌟. And even luckier that I have a person like you beside me 🤗💖.</p>
+</div>
+    <button class="btn" id="confettiBtn">Celebrate 🎉</button>
+  </header>
+
+  <section>
+    <h2>A Little Note</h2>
+    <div class="card">
+      <p>
+        I don’t say this enough — But I have hurt you alot. I owe you much and more for standing with me when I was nothing and making me believe on myself. I Owe you Nidhi.🌸
+      </p>
+      <p>
+        I'm Sorry for all the times I made you cry. Forgive me.🌸
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Some Cute Memories 📸</h2>
+    <div class="carousel" id="carousel">
+      <div class="slides">
+        <div class="slide"><img src="Website/030421.jpg" alt=""><div class="caption">Your laughter makes every moment special 💕</div></div>
+        <div class="slide"><img src="Website/15099.jpg" alt=""><div class="caption">Best moments captured in time 📷</div></div>
+        <div class="slide"><img src="Website/32156.jpg" alt=""><div class="caption">Every smile of yours is priceless 🌸</div></div>
+        <div class="slide"><img src="Website/9449.jpg" alt=""><div class="caption">Here’s to many more memories together 🎉</div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with admiration, warmth, and a lot of love 💕</p>
+  </footer>
+
+  <script>
+    const girlName = "Nidhi"; // change her name here
+    document.getElementById("girlName").textContent = girlName;
+
+    // Confetti effect
+    const confettiBtn = document.getElementById("confettiBtn");
+    confettiBtn.addEventListener("click", () => {
+      for(let i=0;i<150;i++){
+        createConfetti();
+      }
+      for(let i=0;i<15;i++){
+        createHeart();
+      }
+    });
+
+    function createConfetti(){
+      const el=document.createElement("div");
+      el.style.position="fixed";
+      el.style.top="-10px";
+      el.style.left=Math.random()*100+"vw";
+      el.style.width=el.style.height=Math.random()*8+4+"px";
+      el.style.background=["#ff6fa9","#ffc1cc","#fff"][Math.floor(Math.random()*3)];
+      el.style.opacity=0.9;
+      el.style.borderRadius="50%";
+      el.style.pointerEvents="none";
+      el.style.zIndex=9999;
+      el.style.transition="transform 3s linear, top 3s linear";
+      document.body.appendChild(el);
+      requestAnimationFrame(()=>{
+        el.style.top="110vh";
+        el.style.transform=`translate(${(Math.random()-0.5)*200}px,0)`;
+      });
+      setTimeout(()=>el.remove(),3000);
+    }
+
+    function createHeart(){
+      const heart=document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML="❤";
+      heart.style.left=Math.random()*100+"vw";
+      heart.style.fontSize=(Math.random()*20+10)+"px";
+      document.body.appendChild(heart);
+      setTimeout(()=>heart.remove(),6000);
+    }
+
+    // auto floating hearts every 2s
+    setInterval(()=>{
+      createHeart();
+    },2000);
+
+    // Carousel auto scroll
+    const slides=document.querySelector(".slides");
+    const totalSlides=document.querySelectorAll(".slide").length;
+    let index=0;
+    setInterval(()=>{
+      index=(index+1)%totalSlides;
+      slides.style.transform=`translateX(-${index*100}%)`;
+    },3500);
+  </script>
+</body>
+</html>
