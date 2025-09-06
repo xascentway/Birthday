@@ -85,7 +85,7 @@
       overflow:hidden;
       border-radius:20px;
       box-shadow:var(--shadow);
-
+    }
     .slides{
       display:flex;
       transition:transform 0.8s ease;
@@ -95,7 +95,11 @@
       position:relative;
     }
     .slide img{
-      width:100%; height:420px; object-fit:cover;
+      width:100%;
+      height:auto;
+      max-height:420px;
+      object-fit:contain;
+      background:#fff;
     }
     .caption{
       position:absolute;
@@ -152,23 +156,16 @@
   <header class="hero">
     <h1>Happy Birthday, <span id="girlName">Bestie</span> 💖</h1>
     <div class="card">
-    <p>Happy Birthday Nidhi 🎂🎉💖
-<br>
-I don't think I'll ever have the right words to fully express how much you mean to me — but I'll try anyway. ✨
-<br>
-Thank you...
-<br>
-Thank you for showing up in my life and staying. For the laughter 😂, the late-night talks 🌙💬, the silent understanding 🤝, and even the difficult conversations 💭. Thank you for being real with me, for seeing me when I felt invisible 👀, and for all the ups and downs in our bond which is completely different from the last 8 years ⏳💫.
-<br>
-You've been my calm in the chaos 🌊🕊️, my steady when everything else feels shaky 🌍🤍. You've taught me that love doesn't always come with fireworks 🎆 — it can also be quiet, patient, and steady 🌸. And that's exactly what you've been for me.
-<br>
-So today, you deserve that and so much more 🌹. I hope this year brings you peace ☮️, joy 😇, and everything you've quietly wished for when no one was listening 🌠.
-<br>
-I don't know what you think about me or what I truly mean to you 🤔💭, but for me, you matter the most every single time 💖.
-<br>
-Happy Birthday once again, Nidhi 🎂🥳🎀
-I'm so lucky I get to say I know you 🌟. And even luckier that I have a person like you beside me 🤗💖.</p>
-</div>
+      <p>
+        Happy Birthday Nidhi 🎂🎉💖 <br><br>
+        I don't think I'll ever have the right words to fully express how much you mean to me — but I'll try anyway. ✨ <br><br>
+        Thank you for showing up in my life and staying. For the laughter 😂, the late-night talks 🌙💬, the silent understanding 🤝, and even the difficult conversations 💭. Thank you for being real with me, for seeing me when I felt invisible 👀, and for all the ups and downs in our bond which is completely different from the last 8 years ⏳💫. <br><br>
+        You've been my calm in the chaos 🌊🕊️, my steady when everything else feels shaky 🌍🤍. You've taught me that love doesn't always come with fireworks 🎆 — it can also be quiet, patient, and steady 🌸. And that's exactly what you've been for me. <br><br>
+        So today, you deserve that and so much more 🌹. I hope this year brings you peace ☮️, joy 😇, and everything you've quietly wished for when no one was listening 🌠. <br><br>
+        I don't know what you think about me or what I truly mean to you 🤔💭, but for me, you matter the most every single time 💖. <br><br>
+        Happy Birthday once again, Nidhi 🎂🥳🎀 I'm so lucky I get to say I know you 🌟. And even luckier that I have a person like you beside me 🤗💖.
+      </p>
+    </div>
     <button class="btn" id="confettiBtn">Celebrate 🎉</button>
   </header>
 
@@ -176,10 +173,10 @@ I'm so lucky I get to say I know you 🌟. And even luckier that I have a person
     <h2>A Little Note</h2>
     <div class="card">
       <p>
-        I don’t say this enough — But I have hurt you alot. I owe you much and more for standing with me when I was nothing and making me believe on myself. I Owe you Nidhi.🌸
+        I don’t say this enough — But I have hurt you a lot. I owe you much and more for standing with me when I was nothing and making me believe in myself. I Owe you Nidhi. 🌸
       </p>
       <p>
-        I'm Sorry for all the times I made you cry. Forgive me.🌸
+        I'm Sorry for all the times I made you cry. Forgive me. 🌸
       </p>
     </div>
   </section>
@@ -188,7 +185,6 @@ I'm so lucky I get to say I know you 🌟. And even luckier that I have a person
     <h2>Some Cute Memories 📸</h2>
     <div class="carousel" id="carousel">
       <div class="slides">
-<!--         <div class="slide"><img src="Website/030421.jpg" alt=""><div class="caption">Your laughter makes every moment special 💕</div></div> -->
         <div class="slide"><img src="Website/15099.jpg" alt=""><div class="caption">Best moments captured in time 📷</div></div>
         <div class="slide"><img src="Website/32156.jpg" alt=""><div class="caption">Every smile of yours is priceless 🌸</div></div>
         <div class="slide"><img src="Website/9449.jpg" alt=""><div class="caption">Cutie Patotie 🎉</div></div>
@@ -199,53 +195,17 @@ I'm so lucky I get to say I know you 🌟. And even luckier that I have a person
   <footer>
     <p>Made by Ascentway. Hope You Like it. 💕</p>
   </footer>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const girlName = "Nidhi"; // change her name here
-  document.getElementById("girlName").textContent = girlName;
-
-  const confettiBtn = document.getElementById("confettiBtn");
-  confettiBtn.addEventListener("click", () => {
-    for (let i = 0; i < 150; i++) {
-      createConfetti();
-    }
-  });
-
-  function createConfetti() {
-    const el = document.createElement("div");
-    el.style.position = "fixed";
-    el.style.top = "-10px";
-    el.style.left = Math.random() * 100 + "vw";
-    el.style.width = el.style.height = Math.random() * 8 + 4 + "px";
-    el.style.background = ["#ff6fa9", "#ffc1cc", "#fff"][Math.floor(Math.random() * 3)];
-    el.style.opacity = 0.9;
-    el.style.borderRadius = "50%";
-    el.style.pointerEvents = "none";
-    el.style.zIndex = 9999;
-    el.style.transition = "transform 3s linear, top 3s linear";
-    document.body.appendChild(el);
-    requestAnimationFrame(() => {
-      el.style.top = "110vh";
-      el.style.transform = `translate(${(Math.random() - 0.5) * 200}px,0)`;
-    });
-    setTimeout(() => el.remove(), 3000);
-  }
-});
-</script>
 
   <script>
-    const girlName = "Nidhi"; // change her name here
+    const girlName = "Nidhi"; 
     document.getElementById("girlName").textContent = girlName;
 
-    // Confetti effect
+    // Confetti + Hearts on Celebrate Button
     const confettiBtn = document.getElementById("confettiBtn");
     confettiBtn.addEventListener("click", () => {
-      for(let i=0;i<150;i++){
-        createConfetti();
-      }
-      for(let i=0;i<15;i++){
-        createHeart();
-      }
+      alert("🎂🎊 Happy Birthday Nidhi! 🎊🎂");
+      for(let i=0;i<150;i++){ createConfetti(); }
+      for(let i=0;i<15;i++){ createHeart(); }
     });
 
     function createConfetti(){
@@ -279,9 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // auto floating hearts every 2s
-    setInterval(()=>{
-      createHeart();
-    },2000);
+    setInterval(()=>{ createHeart(); },2000);
 
     // Carousel auto scroll
     const slides=document.querySelector(".slides");
@@ -294,9 +252,3 @@ document.addEventListener("DOMContentLoaded", () => {
   </script>
 </body>
 </html>
-
-
-
-
-
-
