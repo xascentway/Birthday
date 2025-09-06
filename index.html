@@ -199,6 +199,39 @@ I'm so lucky I get to say I know you 🌟. And even luckier that I have a person
   <footer>
     <p>Made by Ascentway. Hope You Like it. 💕</p>
   </footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const girlName = "Nidhi"; // change her name here
+  document.getElementById("girlName").textContent = girlName;
+
+  const confettiBtn = document.getElementById("confettiBtn");
+  confettiBtn.addEventListener("click", () => {
+    for (let i = 0; i < 150; i++) {
+      createConfetti();
+    }
+  });
+
+  function createConfetti() {
+    const el = document.createElement("div");
+    el.style.position = "fixed";
+    el.style.top = "-10px";
+    el.style.left = Math.random() * 100 + "vw";
+    el.style.width = el.style.height = Math.random() * 8 + 4 + "px";
+    el.style.background = ["#ff6fa9", "#ffc1cc", "#fff"][Math.floor(Math.random() * 3)];
+    el.style.opacity = 0.9;
+    el.style.borderRadius = "50%";
+    el.style.pointerEvents = "none";
+    el.style.zIndex = 9999;
+    el.style.transition = "transform 3s linear, top 3s linear";
+    document.body.appendChild(el);
+    requestAnimationFrame(() => {
+      el.style.top = "110vh";
+      el.style.transform = `translate(${(Math.random() - 0.5) * 200}px,0)`;
+    });
+    setTimeout(() => el.remove(), 3000);
+  }
+});
+</script>
 
   <script>
     const girlName = "Nidhi"; // change her name here
@@ -261,6 +294,7 @@ I'm so lucky I get to say I know you 🌟. And even luckier that I have a person
   </script>
 </body>
 </html>
+
 
 
 
